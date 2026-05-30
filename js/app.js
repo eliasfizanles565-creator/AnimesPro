@@ -27,50 +27,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ==========================================
-
-    // 2. CAMBIAR VIDEOS EN CUALQUIER TEMPORADA (REPARADO PARA PC)
-
+    // 2. CAMBIAR VIDEOS EN CUALQUIER TEMPORADA (REPARADO PARA PC Y 4MEPLAYER)
     // ==========================================
-
     const botonesEpisodio = document.querySelectorAll(".btn-episodio");
 
-
-
     botonesEpisodio.forEach(boton => {
-
         boton.addEventListener("click", () => {
             const nuevoVideo = boton.getAttribute("data-video");
-
-           
 
             if (nuevoVideo && nuevoVideo.trim() !== "") {
                 const seccionActual = boton.closest("section[id^='seccion-']");
 
                 // Buscamos DIRECTAMENTE el iframe que ya existe en tu HTML
-
                 const iframeExistente = seccionActual.querySelector("#reproductor-principal");
 
                 if (iframeExistente) {
-
-                    // Cambiamos solo el atributo src. Esto mantiene el foco perfecto en PC
-
-                    iframeExistente.src = nuevoVideo;
+                    // TRUCO MÁGICO PARA 4MEPLAYER: 
+                    // Si el enlace contiene '4meplayer', limpiamos el src un instante para forzar la recarga completa
+                    if (nuevoVideo.includes("4meplayer") || iframeExistente.src === nuevoVideo) {
+                        iframeExistente.src = "about:blank";
+                        
+                        setTimeout(() => {
+                            iframeExistente.src = nuevoVideo;
+                        }, 50); // 50 milisegundos bastan para engañar al navegador
+                    } else {
+                        // Para los demás servidores comunes que cambian toda la URL
+                        iframeExistente.src = nuevoVideo;
+                    }
                 } else {
-
                     // Por si acaso no existiera (primera carga), lo buscamos por contenedor
-
                     const contenedorVideo = seccionActual.querySelector("[id^='contenedor-reproductor']");
 
                     if (contenedorVideo) {
                         contenedorVideo.innerHTML = `
-
                             <iframe
                                 id="reproductor-principal"
                                 src="${nuevoVideo}"
                                 class="w-full h-full absolute inset-0"
                                 frameborder="0"
                                 allowfullscreen>
-                            </iframe>
+                            </iframe
                         `;
                     }
                 }
@@ -79,11 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-
     // ==========================================
-
     // 3. CERRAR SECCIÓN AL DAR CLIC EN EL FONDO VACÍO (Y APAGAR VIDEO)
-
     // ==========================================
 
     const seccionesReproductores = document.querySelectorAll("section[id^='seccion-']");
@@ -97,14 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             // Si es un botón de episodio, no hace nada
-
             if (esBotonEpisodio) return;
 
             // Si le da clic al icono pequeño de cerrar, oculta la sección y apaga el video
-
             // =========================================================================
-
-
             // Buscamos si el usuario hizo clic en tu icono de Remix Icon
 
             const esIconoCerrar = event.target.closest('.ri-remix-fill');
@@ -112,13 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (esIconoCerrar) {
 
                 // Busca el iframe y limpia su contenido para que no siga sonando
-
                 const reproductor = seccion.querySelector("#reproductor-principal");
                 if (reproductor) {
-
                     reproductor.src = "about:blank"; // Esto destruye el video al cerrar
                 }
-
                 seccion.classList.add("hidden"); // Oculta la sección
             }
         });
@@ -133,16 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // /////////////////////////////////////////////////
 
-
-
 // ====== POSICIONAR SCROLL DE SECTIONS =========
 
 let isScrolling;
-
 window.addEventListener('scroll', () => {
     window.clearTimeout(isScrolling);
-
-
 
     isScrolling = setTimeout(() => {
         const secciones = document.querySelectorAll('.seccion-snap');
@@ -152,7 +133,6 @@ window.addEventListener('scroll', () => {
 
         secciones.forEach((seccion) => {
             const rect = seccion.getBoundingClientRect();
-
 
             if (rect.bottom < altoPantalla + puntoDeCorte && rect.bottom > altoPantalla - puntoDeCorte) {
                 if (Math.abs(rect.bottom - altoPantalla) > 5) {
