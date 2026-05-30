@@ -2437,6 +2437,11 @@
       object-position: 10% 50%;
     }
   }
+  .max-sm\:object-\[15\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 15% 50%;
+    }
+  }
   .max-sm\:object-\[35\%_50\%\] {
     @media (width < 40rem) {
       object-position: 35% 50%;
@@ -2447,9 +2452,24 @@
       object-position: 41% 50%;
     }
   }
+  .max-sm\:object-\[45\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 45% 50%;
+    }
+  }
   .max-sm\:object-\[48\%_50\%\] {
     @media (width < 40rem) {
       object-position: 48% 50%;
+    }
+  }
+  .max-sm\:object-\[50\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 50% 50%;
+    }
+  }
+  .max-sm\:object-\[55\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 55% 50%;
     }
   }
   .max-sm\:object-\[80\%_50\%\] {
@@ -2766,10 +2786,52 @@
       }
     }
   }
+  .sm\:max-lg\:object-\[40\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 40% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[42\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 42% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[44\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 44% 50%;
+      }
+    }
+  }
   .sm\:max-lg\:object-\[45\%_50\%\] {
     @media (width >= 40rem) {
       @media (width < 64rem) {
         object-position: 45% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[50\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 50% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[60\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 60% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[70\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 70% 50%;
       }
     }
   }
