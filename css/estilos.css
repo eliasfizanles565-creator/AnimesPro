@@ -54,6 +54,7 @@
     --color-pink-900: oklch(40.8% 0.153 2.432);
     --color-pink-950: oklch(28.4% 0.109 3.907);
     --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
@@ -969,6 +970,22 @@
     --tw-scrollbar-thumb: var(--color-amber-500);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
   }
+  .scrollbar-thumb-amber-600 {
+    --tw-scrollbar-thumb: var(--color-amber-600);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
+  .scrollbar-thumb-cyan-600 {
+    --tw-scrollbar-thumb: var(--color-cyan-600);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
+  .scrollbar-thumb-indigo-600 {
+    --tw-scrollbar-thumb: var(--color-indigo-600);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
+  .scrollbar-thumb-purple-600 {
+    --tw-scrollbar-thumb: var(--color-purple-600);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
   .scrollbar-thumb-red-700 {
     --tw-scrollbar-thumb: var(--color-red-700);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
@@ -1275,6 +1292,9 @@
   .bg-purple-600 {
     background-color: var(--color-purple-600);
   }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
+  }
   .bg-red-700 {
     background-color: var(--color-red-700);
   }
@@ -1286,6 +1306,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-rose-500) 10%, transparent);
     }
+  }
+  .bg-rose-600 {
+    background-color: var(--color-rose-600);
   }
   .bg-sky-500 {
     background-color: var(--color-sky-500);
@@ -1316,6 +1339,9 @@
   }
   .bg-transparent {
     background-color: transparent;
+  }
+  .bg-violet-500 {
+    background-color: var(--color-violet-500);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1725,6 +1751,9 @@
   }
   .text-red-800 {
     color: var(--color-red-800);
+  }
+  .text-rose-600 {
+    color: var(--color-rose-600);
   }
   .text-sky-500 {
     color: var(--color-sky-500);
