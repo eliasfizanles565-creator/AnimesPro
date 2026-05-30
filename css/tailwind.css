@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+
+    --color-primario: #008793;
+
+    --font-Playfair: "Playfair Display", serif;
+    --font-Urbanist: "Urbanist", sans-serif;
+    --font-Russo: "Russo One", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
+    --font-Epic:"Montserrat Alternates", sans-serif;
+    --font-Inter:"Inter", sans-serif;
+    --font-Cinzel:"Cinzel", serif;
+
+}
+
+/* CURSORES */
+.card-whiteTouch{
+    cursor: url('../assets/touchWhite.png'), auto;
+}
+
+.card-cyanTouch{
+    cursor: url('../assets/touchCyan.png'), auto;
+}
+.card-cyanCursor{
+    cursor: url('../assets/cursorCyan.png'), auto;
+}
+
+.card-purpleTouch{
+    cursor: url('../assets/touchPurple.png'), auto;
+}
+.card-purpleCursor{
+    cursor: url('../assets/cursorPurple.png'), auto;
+}
+
+.card-amberTouch{
+    cursor: url('../assets/touchAmber.png'), auto;
+}
+.card-amberCursor{
+    cursor: url('../assets/cursorAmber.png'), auto;
+}
+
+
+.card-celesteTouch{
+    cursor: url('../assets/touchCeleste.png'), auto;
+}
+.card-celesteCursor{
+    cursor: url('../assets/cursorCeleste.png'), auto;
+}
+
+
+.card-redTouch{
+    cursor: url('../assets/touchRed.png'), auto;
+}
+.card-redCursor{
+    cursor: url('../assets/cursorRed.png'), auto;
+}
+
+/* .cursores */
+
+
+
+
+.separarLetras {
+    word-spacing: 3px;
+}
+
+.navegacion:hover {
+    color: #008793;
+    transition-duration: .3s ease;
+}
+.navegacionPurple:hover {
+    color: #ad46ff;
+    transition-duration: .3s ease;
+}
+.navegacionBlue:hover {
+    color: #51a2ff;
+    transition-duration: .3s ease;
+}
+.navegacionAmber:hover {
+    color: #fe9a00;
+    transition-duration: .3s ease;
+}
+
+.logito:hover {
+    color:#c10007;
+    transition: .3s ease;
+}
+.logito2:hover {
+    color:#f6339a;
+    transition: .3s ease;
+}
+.logitoBlue:hover {
+    color:#51a2ff;
+    transition: .3s ease;
+}
+
+.botonsitos{
+    transition:transform 0.3s ease;
+}
+/* Este es el efecto normal al hacer clic (el impulso) */
+.botonsitos:hover {
+    transform: scale(1.10) translateY(-10px);
+}
+/* Esta clase mantendrá el botón arriba y agrandado */
+.botonsitos.subido {
+    transform: scale(1.10) translateY(-10px);
+}
+
+
+video::-webkit-media-controls-panel {
+    display: flex !important;
+    align-items: flex-end !important; /* Fuerza las opciones hacia la base */
+    justify-content: content;
+}
