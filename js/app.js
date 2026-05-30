@@ -205,26 +205,6 @@ window.addEventListener('scroll', () => {
 
 //////////////////////////////////////////////////////
 
-// ==== CAMBIAR BOTONES DE 4 PLAYER ME ====
-// Seleccionamos todos los botones de los episodios
-const botones = document.querySelectorAll('.btn-episodio');
-// Seleccionamos el iframe de tu reproductor (asegúrate de que tu <iframe> tenga id="reproductor")
-const reproductor = document.getElementById('reproductor');
 
-botones.forEach(boton => {
-    boton.addEventListener('click', () => {
-        const nuevoVideo = boton.getAttribute('data-video');
-        
-        if (reproductor && nuevoVideo) {
-            // TRUCO MÁGICO: Vaciamos el reproductor un instante para forzar el reinicio
-            reproductor.src = ""; 
-            
-            // Le damos un mini respiro de 50 milisegundos y cargamos el nuevo capítulo
-            setTimeout(() => {
-                reproductor.src = nuevoVideo;
-            }, 50);
-        }
-    });
-});
 
 ///////////////////////////////////////////////////
