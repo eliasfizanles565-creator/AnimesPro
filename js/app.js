@@ -112,8 +112,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+    // ==========================================
+    // 4. CERRAR MENÚ SÁNDWICH AL CLICAR FUERA
+    // ==========================================
+    const checkboxMenu = document.getElementById("menu-toggle");
+    // Seleccionamos el contenedor que tiene el botón y el menú adentro
+    const contenedorSandwich = checkboxMenu ? checkboxMenu.parentElement : null;
 
-
+    if (checkboxMenu && contenedorSandwich) {
+        document.addEventListener("click", (event) => {
+            // Si el checkbox está marcado (el menú está abierto)
+            if (checkboxMenu.checked) {
+                // Verificamos si el clic fue FUERA de todo el bloque del sándwich
+                if (!contenedorSandwich.contains(event.target)) {
+                    checkboxMenu.checked = false; // Desmarca el checkbox y Tailwind lo oculta solo
+                }
+            }
+        });
+    }
 
 
 

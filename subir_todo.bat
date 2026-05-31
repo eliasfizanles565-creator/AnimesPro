@@ -32,7 +32,7 @@ echo Preparando subida...
 git add .
 git commit -m "Subida automatica inteligente"
 echo Enviando a GitHub...
-git push origin main --force
+git push origin main
 
 :: 3. Reporte Final
 echo -----------------------------------------------
