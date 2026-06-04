@@ -58,6 +58,7 @@
     --color-pink-700: oklch(52.5% 0.223 3.958);
     --color-pink-900: oklch(40.8% 0.153 2.432);
     --color-pink-950: oklch(28.4% 0.109 3.907);
+    --color-rose-400: oklch(71.2% 0.194 13.428);
     --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-slate-200: oklch(92.9% 0.013 255.508);
@@ -420,6 +421,12 @@
   }
   .left-7 {
     left: calc(var(--spacing) * 7);
+  }
+  .left-7\.5 {
+    left: calc(var(--spacing) * 7.5);
+  }
+  .left-7\.25 {
+    left: calc(var(--spacing) * 7.25);
   }
   .left-8 {
     left: calc(var(--spacing) * 8);
@@ -1711,6 +1718,12 @@
   }
   .text-red-800 {
     color: var(--color-red-800);
+  }
+  .text-rose-400 {
+    color: var(--color-rose-400);
+  }
+  .text-rose-500 {
+    color: var(--color-rose-500);
   }
   .text-sky-500 {
     color: var(--color-sky-500);
