@@ -2461,9 +2461,29 @@
       border-radius: var(--radius-xl);
     }
   }
+  .max-sm\:object-\[0\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 0% 50%;
+    }
+  }
+  .max-sm\:object-\[1\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 1% 50%;
+    }
+  }
   .max-sm\:object-\[10\%_50\%\] {
     @media (width < 40rem) {
       object-position: 10% 50%;
+    }
+  }
+  .max-sm\:object-\[15\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 15% 50%;
+    }
+  }
+  .max-sm\:object-\[20\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 20% 50%;
     }
   }
   .max-sm\:object-\[35\%_50\%\] {
@@ -2501,6 +2521,11 @@
       object-position: 50% 50%;
     }
   }
+  .max-sm\:object-\[60\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 60% 50%;
+    }
+  }
   .max-sm\:object-\[70\%_50\%\] {
     @media (width < 40rem) {
       object-position: 70% 50%;
@@ -2514,6 +2539,16 @@
   .max-sm\:object-\[90\%_50\%\] {
     @media (width < 40rem) {
       object-position: 90% 50%;
+    }
+  }
+  .max-sm\:object-\[99\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 99% 50%;
+    }
+  }
+  .max-sm\:object-\[100\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 100% 50%;
     }
   }
   .max-sm\:py-4 {
@@ -2846,6 +2881,20 @@
     @media (width >= 40rem) {
       @media (width < 64rem) {
         object-position: 72% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[73\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 73% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[74\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 74% 50%;
       }
     }
   }
