@@ -2288,6 +2288,16 @@
       bottom: calc(var(--spacing) * 2);
     }
   }
+  .max-sm\:bottom-2\.5 {
+    @media (width < 40rem) {
+      bottom: calc(var(--spacing) * 2.5);
+    }
+  }
+  .max-sm\:bottom-3 {
+    @media (width < 40rem) {
+      bottom: calc(var(--spacing) * 3);
+    }
+  }
   .max-sm\:bottom-15 {
     @media (width < 40rem) {
       bottom: calc(var(--spacing) * 15);
@@ -2296,6 +2306,11 @@
   .max-sm\:left-1 {
     @media (width < 40rem) {
       left: calc(var(--spacing) * 1);
+    }
+  }
+  .max-sm\:left-2 {
+    @media (width < 40rem) {
+      left: calc(var(--spacing) * 2);
     }
   }
   .max-sm\:left-2\.5 {
@@ -2456,6 +2471,11 @@
   .max-sm\:object-\[41\%_50\%\] {
     @media (width < 40rem) {
       object-position: 41% 50%;
+    }
+  }
+  .max-sm\:object-\[42\%_50\%\] {
+    @media (width < 40rem) {
+      object-position: 42% 50%;
     }
   }
   .max-sm\:object-\[45\%_50\%\] {
@@ -2769,6 +2789,13 @@
     @media (width >= 40rem) {
       @media (width < 64rem) {
         object-position: 39% 50%;
+      }
+    }
+  }
+  .sm\:max-lg\:object-\[42\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 42% 50%;
       }
     }
   }
@@ -3166,6 +3193,20 @@
   .lg\:pl-20 {
     @media (width >= 64rem) {
       padding-left: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:max-2xl\:left-2\.5 {
+    @media (width >= 64rem) {
+      @media (width < 96rem) {
+        left: calc(var(--spacing) * 2.5);
+      }
+    }
+  }
+  .lg\:max-2xl\:left-3 {
+    @media (width >= 64rem) {
+      @media (width < 96rem) {
+        left: calc(var(--spacing) * 3);
+      }
     }
   }
   .lg\:max-2xl\:left-4 {
