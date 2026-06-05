@@ -19,10 +19,19 @@
     font-family: 'MiFuenteGodOfWar';
     src: url('../assets/GOD OF WAR/GodOfWar.ttf') format('truetype');
 }
-
 .GodOfWar {
     font-family: 'MiFuenteGodOfWar', sans-serif;
 }
+
+@font-face {
+    font-family: 'MiFuenteNaruto';
+    src: url('../assets/NARUTO/naruto.ttf') format('truetype');
+}
+.naruto {
+    font-family: 'MiFuenteNaruto', sans-serif;
+}
+
+
 
 
 
