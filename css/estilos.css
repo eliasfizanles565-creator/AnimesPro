@@ -17,6 +17,7 @@
     --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-amber-950: oklch(27.9% 0.077 45.635);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-lime-400: oklch(84.1% 0.238 128.85);
     --color-lime-500: oklch(76.8% 0.233 130.85);
@@ -54,6 +55,8 @@
     --color-pink-900: oklch(40.8% 0.153 2.432);
     --color-pink-950: oklch(28.4% 0.109 3.907);
     --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
+    --color-rose-800: oklch(45.5% 0.188 13.697);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
@@ -128,6 +131,7 @@
     --font-Montserrat: "Montserrat", sans-serif;
     --font-Epic: "Montserrat Alternates", sans-serif;
     --font-Cinzel: "Cinzel", serif;
+    --font-Paytone: "Paytone One", sans-serif;
   }
 }
 @layer base {
@@ -953,6 +957,10 @@
     --tw-scrollbar-thumb: var(--color-red-700);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
   }
+  .scrollbar-thumb-red-800 {
+    --tw-scrollbar-thumb: var(--color-red-800);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
   .scrollbar-thumb-sky-600 {
     --tw-scrollbar-thumb: var(--color-sky-600);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
@@ -1165,6 +1173,9 @@
   }
   .border-red-700 {
     border-color: var(--color-red-700);
+  }
+  .border-red-800 {
+    border-color: var(--color-red-800);
   }
   .border-sky-500 {
     border-color: var(--color-sky-500);
@@ -1519,6 +1530,9 @@
   .font-Montserrat {
     font-family: var(--font-Montserrat);
   }
+  .font-Paytone {
+    font-family: var(--font-Paytone);
+  }
   .font-Russo {
     font-family: var(--font-Russo);
   }
@@ -1594,10 +1608,6 @@
   .text-\[10px\] {
     font-size: 10px;
   }
-  .leading-1 {
-    --tw-leading: calc(var(--spacing) * 1);
-    line-height: calc(var(--spacing) * 1);
-  }
   .leading-2 {
     --tw-leading: calc(var(--spacing) * 2);
     line-height: calc(var(--spacing) * 2);
@@ -1606,14 +1616,6 @@
     --tw-leading: calc(var(--spacing) * 5);
     line-height: calc(var(--spacing) * 5);
   }
-  .leading-10 {
-    --tw-leading: calc(var(--spacing) * 10);
-    line-height: calc(var(--spacing) * 10);
-  }
-  .leading-15 {
-    --tw-leading: calc(var(--spacing) * 15);
-    line-height: calc(var(--spacing) * 15);
-  }
   .leading-17 {
     --tw-leading: calc(var(--spacing) * 17);
     line-height: calc(var(--spacing) * 17);
@@ -1621,10 +1623,6 @@
   .leading-20 {
     --tw-leading: calc(var(--spacing) * 20);
     line-height: calc(var(--spacing) * 20);
-  }
-  .leading-25 {
-    --tw-leading: calc(var(--spacing) * 25);
-    line-height: calc(var(--spacing) * 25);
   }
   .leading-none {
     --tw-leading: 1;
@@ -1753,6 +1751,15 @@
   .text-red-800 {
     color: var(--color-red-800);
   }
+  .text-rose-500 {
+    color: var(--color-rose-500);
+  }
+  .text-rose-600 {
+    color: var(--color-rose-600);
+  }
+  .text-rose-800 {
+    color: var(--color-rose-800);
+  }
   .text-sky-500 {
     color: var(--color-sky-500);
   }
@@ -1776,6 +1783,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
+  }
+  .text-yellow-400 {
+    color: var(--color-yellow-400);
   }
   .text-yellow-500 {
     color: var(--color-yellow-500);
@@ -4004,6 +4014,13 @@
 }
 .danmachi2 {
   font-family: 'MiFuenteDanmachi2', sans-serif;
+}
+@font-face {
+  font-family: 'MiFuenteRanma';
+  src: url('../assets/RANMA/ranma.ttf') format('truetype');
+}
+.ranma {
+  font-family: 'MiFuenteRanma', sans-serif;
 }
 .card-whiteTouch {
   cursor: url('../assets/touchWhite.png'), auto;
