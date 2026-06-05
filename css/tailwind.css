@@ -39,6 +39,21 @@
     font-family: 'MiFuenteOverlord', sans-serif;
 }
 
+@font-face {
+    font-family: 'MiFuenteDanmachi';
+    src: url('../assets/DANMACHI/danmachi.ttf') format('truetype');
+}
+.danmachi {
+    font-family: 'MiFuenteDanmachi', sans-serif;
+}
+@font-face {
+    font-family: 'MiFuenteDanmachi2';
+    src: url('../assets/DANMACHI/danmachi2.ttf') format('truetype');
+}
+.danmachi2 {
+    font-family: 'MiFuenteDanmachi2', sans-serif;
+}
+
 
 
 
@@ -107,6 +122,10 @@
 }
 .navegacionAmber:hover {
     color: #fe9a00;
+    transition-duration: .3s ease;
+}
+.navegacionIndigo:hover {
+    color: #615fff;
     transition-duration: .3s ease;
 }
 
