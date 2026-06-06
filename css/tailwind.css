@@ -12,8 +12,6 @@
     --font-Inter:"Inter", sans-serif;
     --font-Cinzel:"Cinzel", serif;
 
-    --font-Paytone:"Paytone One", sans-serif;
-
 }
 
 /* PASO 1: Le dices al navegador cómo se llama la fuente y dónde está guardada */
@@ -62,6 +60,14 @@
 }
 .ranma {
     font-family: 'MiFuenteRanma', sans-serif;
+}
+
+@font-face {
+    font-family: 'MiFuenteHero';
+    src: url('../assets/TO BE HERO/hero.ttf') format('truetype');
+}
+.hero {
+    font-family: 'MiFuenteHero', sans-serif;
 }
 
 
