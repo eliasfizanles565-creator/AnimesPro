@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(80.8% 0.114 19.571);
+    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-red-800: oklch(44.4% 0.177 26.899);
@@ -23,9 +25,11 @@
     --color-lime-600: oklch(64.8% 0.2 131.684);
     --color-lime-700: oklch(53.2% 0.157 131.589);
     --color-lime-950: oklch(27.4% 0.072 132.109);
+    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-cyan-600: oklch(60.9% 0.126 221.723);
+    --color-sky-300: oklch(82.8% 0.111 230.318);
     --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-sky-500: oklch(68.5% 0.169 237.323);
     --color-sky-600: oklch(58.8% 0.158 241.966);
@@ -48,11 +52,14 @@
     --color-fuchsia-700: oklch(51.8% 0.253 323.949);
     --color-fuchsia-900: oklch(40.1% 0.17 325.612);
     --color-fuchsia-950: oklch(29.3% 0.136 325.661);
+    --color-pink-300: oklch(82.3% 0.12 346.018);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-pink-700: oklch(52.5% 0.223 3.958);
     --color-pink-900: oklch(40.8% 0.153 2.432);
     --color-pink-950: oklch(28.4% 0.109 3.907);
+    --color-rose-400: oklch(71.2% 0.194 13.428);
     --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-slate-200: oklch(92.9% 0.013 255.508);
@@ -126,6 +133,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primario: #008793;
+    --font-Playfair: "Playfair Display", serif;
     --font-Urbanist: "Urbanist", sans-serif;
     --font-Russo: "Russo One", sans-serif;
     --font-Montserrat: "Montserrat", sans-serif;
@@ -940,6 +948,10 @@
     --tw-scrollbar-thumb: var(--color-amber-600);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
   }
+  .scrollbar-thumb-cyan-500 {
+    --tw-scrollbar-thumb: var(--color-cyan-500);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
   .scrollbar-thumb-cyan-600 {
     --tw-scrollbar-thumb: var(--color-cyan-600);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
@@ -962,6 +974,10 @@
   }
   .scrollbar-thumb-rose-600 {
     --tw-scrollbar-thumb: var(--color-rose-600);
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+  }
+  .scrollbar-thumb-sky-500 {
+    --tw-scrollbar-thumb: var(--color-sky-500);
     scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
   }
   .scrollbar-thumb-sky-600 {
@@ -1150,6 +1166,9 @@
   .border-blue-500 {
     border-color: var(--color-blue-500);
   }
+  .border-cyan-400 {
+    border-color: var(--color-cyan-400);
+  }
   .border-cyan-500 {
     border-color: var(--color-cyan-500);
   }
@@ -1182,6 +1201,9 @@
   }
   .border-rose-600 {
     border-color: var(--color-rose-600);
+  }
+  .border-sky-400 {
+    border-color: var(--color-sky-400);
   }
   .border-sky-500 {
     border-color: var(--color-sky-500);
@@ -1227,6 +1249,9 @@
   }
   .bg-cyan-400 {
     background-color: var(--color-cyan-400);
+  }
+  .bg-cyan-500 {
+    background-color: var(--color-cyan-500);
   }
   .bg-cyan-600 {
     background-color: var(--color-cyan-600);
@@ -1293,6 +1318,9 @@
   }
   .bg-rose-600 {
     background-color: var(--color-rose-600);
+  }
+  .bg-sky-400 {
+    background-color: var(--color-sky-400);
   }
   .bg-sky-500 {
     background-color: var(--color-sky-500);
@@ -1760,6 +1788,12 @@
   .text-rose-600 {
     color: var(--color-rose-600);
   }
+  .text-sky-300 {
+    color: var(--color-sky-300);
+  }
+  .text-sky-400 {
+    color: var(--color-sky-400);
+  }
   .text-sky-500 {
     color: var(--color-sky-500);
   }
@@ -1916,6 +1950,30 @@
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-blue-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-cyan-500 {
+    --tw-shadow-color: oklch(71.5% 0.143 215.221);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-cyan-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-cyan-500\/50 {
+    --tw-shadow-color: color-mix(in srgb, oklch(71.5% 0.143 215.221) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-cyan-500) 50%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-cyan-600 {
+    --tw-shadow-color: oklch(60.9% 0.126 221.723);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-cyan-600) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-cyan-600\/50 {
+    --tw-shadow-color: color-mix(in srgb, oklch(60.9% 0.126 221.723) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-cyan-600) 50%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .shadow-fuchsia-500 {
     --tw-shadow-color: oklch(66.7% 0.295 322.15);
     @supports (color: color-mix(in lab, red, red)) {
@@ -2058,6 +2116,18 @@
     --tw-shadow-color: color-mix(in srgb, oklch(58.6% 0.253 17.585) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-rose-600) 30%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-sky-500 {
+    --tw-shadow-color: oklch(68.5% 0.169 237.323);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-sky-500) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-sky-500\/50 {
+    --tw-shadow-color: color-mix(in srgb, oklch(68.5% 0.169 237.323) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-sky-500) 50%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
   .shadow-sky-600 {
@@ -2433,11 +2503,6 @@
       left: calc(var(--spacing) * 11);
     }
   }
-  .max-sm\:left-15 {
-    @media (width < 40rem) {
-      left: calc(var(--spacing) * 15);
-    }
-  }
   .max-sm\:mt-20 {
     @media (width < 40rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -2578,11 +2643,6 @@
       object-position: 50% 50%;
     }
   }
-  .max-sm\:object-\[55\%_50\%\] {
-    @media (width < 40rem) {
-      object-position: 55% 50%;
-    }
-  }
   .max-sm\:object-\[57\%_50\%\] {
     @media (width < 40rem) {
       object-position: 57% 50%;
@@ -2593,11 +2653,6 @@
       object-position: 58% 50%;
     }
   }
-  .max-sm\:object-\[60\%_50\%\] {
-    @media (width < 40rem) {
-      object-position: 60% 50%;
-    }
-  }
   .max-sm\:object-\[65\%_50\%\] {
     @media (width < 40rem) {
       object-position: 65% 50%;
@@ -2606,11 +2661,6 @@
   .max-sm\:object-\[70\%_50\%\] {
     @media (width < 40rem) {
       object-position: 70% 50%;
-    }
-  }
-  .max-sm\:object-\[75\%_50\%\] {
-    @media (width < 40rem) {
-      object-position: 75% 50%;
     }
   }
   .max-sm\:object-\[80\%_50\%\] {
@@ -2728,12 +2778,6 @@
     @media (width < 40rem) {
       --tw-leading: calc(var(--spacing) * 14);
       line-height: calc(var(--spacing) * 14);
-    }
-  }
-  .max-sm\:leading-15 {
-    @media (width < 40rem) {
-      --tw-leading: calc(var(--spacing) * 15);
-      line-height: calc(var(--spacing) * 15);
     }
   }
   .max-sm\:leading-19 {
@@ -4109,6 +4153,13 @@
 }
 .hero {
   font-family: 'MiFuenteHero', sans-serif;
+}
+@font-face {
+  font-family: 'MiFuenteAmagami';
+  src: url('../assets/AMAGAMI/amagami.ttf') format('truetype');
+}
+.amagami {
+  font-family: 'MiFuenteAmagami', sans-serif;
 }
 .card-whiteTouch {
   cursor: url('../assets/touchWhite.png'), auto;

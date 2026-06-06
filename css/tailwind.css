@@ -70,6 +70,14 @@
     font-family: 'MiFuenteHero', sans-serif;
 }
 
+@font-face {
+    font-family: 'MiFuenteAmagami';
+    src: url('../assets/AMAGAMI/amagami.ttf') format('truetype');
+}
+.amagami {
+    font-family: 'MiFuenteAmagami', sans-serif;
+}
+
 
 
 
