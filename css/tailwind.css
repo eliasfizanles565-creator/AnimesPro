@@ -116,11 +116,27 @@
 }
 
 
+.card-skyTouch{
+    cursor: url('../assets/touchSky.png'), auto;
+}
+.card-skyCursor{
+    cursor: url('../assets/cursorSky.png'), auto;
+}
+
+
 .card-redTouch{
     cursor: url('../assets/touchRed.png'), auto;
 }
 .card-redCursor{
     cursor: url('../assets/cursorRed.png'), auto;
+}
+
+
+.card-limeTouch{
+    cursor: url('../assets/touchLime.png'), auto;
+}
+.card-limeCursor{
+    cursor: url('../assets/cursorLime.png'), auto;
 }
 
 /* .cursores */
@@ -142,6 +158,14 @@
 }
 .navegacionBlue:hover {
     color: #51a2ff;
+    transition-duration: .3s ease;
+}
+.navegacionSky:hover {
+    color: #00bcff;
+    transition-duration: .3s ease;
+}
+.navegacionLime:hover {
+    color: #7ccf00;
     transition-duration: .3s ease;
 }
 .navegacionAmber:hover {
