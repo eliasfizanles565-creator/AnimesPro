@@ -3287,6 +3287,13 @@
       }
     }
   }
+  .sm\:max-lg\:object-\[95\%_50\%\] {
+    @media (width >= 40rem) {
+      @media (width < 64rem) {
+        object-position: 95% 50%;
+      }
+    }
+  }
   .sm\:max-lg\:object-\[99\%_50\%\] {
     @media (width >= 40rem) {
       @media (width < 64rem) {
