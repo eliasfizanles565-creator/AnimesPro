@@ -199,12 +199,9 @@
 }
 /* Esta clase mantendrá el botón arriba y agrandado */
 .botonsitos.subido {
-    transform: scale(1.10) translateY(-10px);
+    transform: scale(1.10)
 }
 
 
-video::-webkit-media-controls-panel {
-    display: flex !important;
-    align-items: flex-end !important; /* Fuerza las opciones hacia la base */
-    justify-content: content;
-}
+
+
